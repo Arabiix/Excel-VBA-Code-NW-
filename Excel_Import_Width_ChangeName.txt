@@ -36,7 +36,7 @@ Sub ImportExcelDirectly()
         Exit Sub
     End If
     
-                                                                    '-Whats the purpuse of this function???? Is it needed?????
+                                                                    '-Redo function!!!!
     ' Check if the file exists
     If Dir(filePath) = "" Then
         MsgBox "The specified file does not exist. Please check the file path.", vbExclamation
@@ -75,11 +75,11 @@ Sub ImportExcelDirectly()
     End If
     Debug.Print "Imported workbook opened: " & importWorkbook.Name
     
-                                                                    '-Whats the purpuse of this function???? Is it needed?????
+                                                                    '-Redo function!!!!
     ' Copy data from the first sheet of the imported workbook
     importWorkbook.Sheets(1).UsedRange.Copy Destination:=newSheet.Range("A1")
     
-                                                                    '-Add loop for file selection - if file is not selected after second attempt stop script!!!!
+                                                                    '-Redo function!!!!
     ' Close the imported workbook (optional, if you don't need it open anymore)
     importWorkbook.Close SaveChanges:=False
     
