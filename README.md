@@ -1,6 +1,6 @@
 README: ImportExcelDirectly Function
 ---------------------------------------------------------------------------------------------------------------------------------------
-*Overview
+Overview
 The ImportExcelDirectly VBA macro simplifies the process of importing Excel files into your workbook. 
 This function allows you to select a file from your Downloads folder, automatically creates a new 
 worksheet in your active workbook with a unique name (e.g., ImportedData1, ImportedData2, etc.), and 
@@ -9,7 +9,7 @@ copies the data from the first sheet of the selected file.
 The function also includes error handling that displays meaningful messages to help you resolve issues, 
 and outputs debug information for troubleshooting.
 ---------------------------------------------------------------------------------------------------------------------------------------
-*Key Features
+Key Features
 -File Selection: The function opens a file dialog to choose an Excel file from the Downloads folder.
 -Unique Worksheet Naming: Automatically generates unique names for new worksheets (e.g., 
  ImportedData1, ImportedData2, etc.), preventing name conflicts.
@@ -21,7 +21,7 @@ and outputs debug information for troubleshooting.
  has been imported!" to notify you of the process status.
 -Debugging: Outputs detailed debug information in the Immediate Window for troubleshooting.
 
-*System Requirements
+System Requirements
 -Excel: The macro is compatible with any version of Excel that supports VBA.
 -File Type: The function is designed to work with Excel files in .xls, .xlsx, or .xlsm formats.
 ---------------------------------------------------------------------------------------------------------------------------------------
