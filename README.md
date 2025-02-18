@@ -2,7 +2,8 @@
 
 ---------------------------------------------------------------------------------------------------------------------------------------
 
-Overview
+Overview:
+
 The ImportExcelDirectly VBA macro simplifies the process of importing Excel files into your workbook. 
 This function allows you to select a file from your Downloads folder, automatically creates a new 
 worksheet in your active workbook with a unique name (e.g., ImportedData1, ImportedData2, etc.), and 
@@ -13,7 +14,8 @@ and outputs debug information for troubleshooting.
 
 ---------------------------------------------------------------------------------------------------------------------------------------
 
-Key Features
+Key Features:
+
 -File Selection: The function opens a file dialog to choose an Excel file from the Downloads folder.
 -Unique Worksheet Naming: Automatically generates unique names for new worksheets (e.g., 
  ImportedData1, ImportedData2, etc.), preventing name conflicts.
@@ -25,13 +27,15 @@ Key Features
  has been imported!" to notify you of the process status.
 -Debugging: Outputs detailed debug information in the Immediate Window for troubleshooting.
 
-System Requirements
+System Requirements:
+
 -Excel: The macro is compatible with any version of Excel that supports VBA.
 -File Type: The function is designed to work with Excel files in .xls, .xlsx, or .xlsm formats.
 
 ---------------------------------------------------------------------------------------------------------------------------------------
 
-How to Use the Script
+How to Use the Script:
+
 1.Open the Workbook: Open the Excel workbook where you want to import the file.
 2.Access the VBA Editor:
 --Press Alt + F11 to open the VBA editor.
@@ -56,7 +60,8 @@ will be displayed in the new worksheet.
 
 ---------------------------------------------------------------------------------------------------------------------------------------
 
-Error Handling
+Error Handling:
+
 The function includes the following error checks and messages:
 -File Selection Error: If you cancel the file selection, a message will inform you that no file was 
 selected and the process will stop.
@@ -69,7 +74,8 @@ with the error number and description.
 
 ---------------------------------------------------------------------------------------------------------------------------------------
 
-Debugging
+Debugging:
+
 The function uses Debug.Print statements to provide helpful information in the Immediate Window:
 -File Path: The path of the file selected.
 -Worksheet Name: The name of the newly created worksheet.
@@ -80,7 +86,8 @@ To view the debug messages:
 
 ---------------------------------------------------------------------------------------------------------------------------------------
 
-Code Breakdown
+Code Breakdown:
+
 Here's an overview of what the function does step by step:
 1.File Selection:
 --The function opens a file dialog to select an Excel file. It defaults to the Downloads folder and 
@@ -88,10 +95,12 @@ Here's an overview of what the function does step by step:
 --If the user cancels the selection, the function stops and displays a message.
 
 2.Create a Unique Worksheet:
+
 --The function checks for existing worksheets named ImportedData1, ImportedData2, etc., and 
   increments the number until it finds an available name.
 
-3.Open the File:
+3.Open the File::
+
 --After the file is selected, the function tries to open it. If the file can't be opened, an error 
   message will be shown.
 
