@@ -105,19 +105,23 @@ Here's an overview of what the function does step by step:
   message will be shown.
 
 4.Copy Data:
+
 --The function copies the data from the first sheet of the selected file (using UsedRange.Copy to 
   include all data). It then pastes the data into the newly created worksheet.
 
 5.Close the Imported File:
+
 --Once the data is copied, the imported file is closed without saving any changes.
 
 6.Confirmation Message:
+
 --A message box will appear once the import is complete, confirming that the document has 
   been successfully imported.
 
 ---------------------------------------------------------------------------------------------------------------------------------------
 
-Error Messages
+Error Messages:
+
 These are the possible error messages you might see during the process:
 -"No file selected": The file selection dialog was canceled.
 -"Failed to open file": The selected file couldn't be opened (possibly because it's corrupted or not an Excel file).
@@ -126,7 +130,8 @@ These are the possible error messages you might see during the process:
 
 ---------------------------------------------------------------------------------------------------------------------------------------
 
-Customization Options
+Customization Options:
+
 1.Change the Default Folder: By default, the file dialog starts in the Downloads folder. You can 
   change the folder path by modifying the downloadsFolder line in the code:
 vba
@@ -135,15 +140,16 @@ vba
 
 2.Worksheet Name Prefix: If you want to change the name format for the new worksheets, modify 
   this line in the code:
+
 vb
 	sheetName = "ImportedData" & i
        -You can change "ImportedData" to any custom prefix you'd like.-
 
 ---------------------------------------------------------------------------------------------------------------------------------------
 
-Known Limitations
+Known Limitations:
+
 -Single Sheet Import: The function imports only the data from the first sheet of the selected file. If you 
 want to import data from other sheets, additional modifications would be needed.
 -Excel File Format: The function expects the file to be a valid Excel file (.xls, .xlsx, .xlsm). If the file is in 
 a different format or corrupted, an error will be triggered.
-******
