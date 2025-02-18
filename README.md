@@ -1,5 +1,7 @@
-README: ImportExcelDirectly Function
+******README: ImportExcelDirectly Function
+
 ---------------------------------------------------------------------------------------------------------------------------------------
+
 Overview
 The ImportExcelDirectly VBA macro simplifies the process of importing Excel files into your workbook. 
 This function allows you to select a file from your Downloads folder, automatically creates a new 
@@ -8,7 +10,9 @@ copies the data from the first sheet of the selected file.
 
 The function also includes error handling that displays meaningful messages to help you resolve issues, 
 and outputs debug information for troubleshooting.
+
 ---------------------------------------------------------------------------------------------------------------------------------------
+
 Key Features
 -File Selection: The function opens a file dialog to choose an Excel file from the Downloads folder.
 -Unique Worksheet Naming: Automatically generates unique names for new worksheets (e.g., 
@@ -24,8 +28,10 @@ Key Features
 System Requirements
 -Excel: The macro is compatible with any version of Excel that supports VBA.
 -File Type: The function is designed to work with Excel files in .xls, .xlsx, or .xlsm formats.
+
 ---------------------------------------------------------------------------------------------------------------------------------------
-*How to Use the Script
+
+How to Use the Script
 1.Open the Workbook: Open the Excel workbook where you want to import the file.
 2.Access the VBA Editor:
 --Press Alt + F11 to open the VBA editor.
@@ -47,8 +53,10 @@ your Downloads folder, where the file is assumed to be located.
 new worksheet in your active workbook.
 --After the import is complete, you will receive a confirmation message, and the imported data 
 will be displayed in the new worksheet.
+
 ---------------------------------------------------------------------------------------------------------------------------------------
-*Error Handling
+
+Error Handling
 The function includes the following error checks and messages:
 -File Selection Error: If you cancel the file selection, a message will inform you that no file was 
 selected and the process will stop.
@@ -58,8 +66,10 @@ format), an error message will be displayed.
 will alert you.
 -General Errors: If an unforeseen error occurs, the function will display detailed error information 
 with the error number and description.
+
 ---------------------------------------------------------------------------------------------------------------------------------------
-*Debugging
+
+Debugging
 The function uses Debug.Print statements to provide helpful information in the Immediate Window:
 -File Path: The path of the file selected.
 -Worksheet Name: The name of the newly created worksheet.
@@ -67,8 +77,10 @@ The function uses Debug.Print statements to provide helpful information in the I
 
 To view the debug messages:
 -Press Ctrl + G in the VBA editor to open the Immediate Window.
+
 ---------------------------------------------------------------------------------------------------------------------------------------
-*Code Breakdown
+
+Code Breakdown
 Here's an overview of what the function does step by step:
 1.File Selection:
 --The function opens a file dialog to select an Excel file. It defaults to the Downloads folder and 
@@ -93,15 +105,19 @@ Here's an overview of what the function does step by step:
 6.Confirmation Message:
 --A message box will appear once the import is complete, confirming that the document has 
   been successfully imported.
+
 ---------------------------------------------------------------------------------------------------------------------------------------
-*Error Messages
+
+Error Messages
 These are the possible error messages you might see during the process:
 -"No file selected": The file selection dialog was canceled.
 -"Failed to open file": The selected file couldn't be opened (possibly because it's corrupted or not an Excel file).
 -"Error copying data": There was an issue while copying data from the imported file (e.g., no usable data in the sheet).
 -General VBA Errors: If an unexpected error occurs, you’ll get detailed information, including the error number and description.
+
 ---------------------------------------------------------------------------------------------------------------------------------------
-*Customization Options
+
+Customization Options
 1.Change the Default Folder: By default, the file dialog starts in the Downloads folder. You can 
   change the folder path by modifying the downloadsFolder line in the code:
 vba
@@ -113,9 +129,12 @@ vba
 vb
 	sheetName = "ImportedData" & i
        -You can change "ImportedData" to any custom prefix you'd like.-
+
 ---------------------------------------------------------------------------------------------------------------------------------------
-*Known Limitations
+
+Known Limitations
 -Single Sheet Import: The function imports only the data from the first sheet of the selected file. If you 
 want to import data from other sheets, additional modifications would be needed.
 -Excel File Format: The function expects the file to be a valid Excel file (.xls, .xlsx, .xlsm). If the file is in 
 a different format or corrupted, an error will be triggered.
+******
